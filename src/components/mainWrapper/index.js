@@ -2,7 +2,6 @@ import {useEffect, useState} from 'react';
 import {API_ENDPOINTS, BASE_URL} from '../../utils/constants';
 import Card from '../card';
 import {Bounce, toast} from 'react-toastify';
-import Modal from '../Modal';
 import AddEmployeeModal from '../addEmployeeModal';
 import {dummyData} from '../../utils/dummyData';
 
@@ -36,24 +35,9 @@ const MainWrapper = () => {
 			if (!deleteResp?.ok) {
 				throw new Error('Failed to delete');
 			}
-			toast.success('Deleted!', {
-				position: 'top-center',
-				autoClose: 5000,
-				closeOnClick: true,
-				draggable: true,
-				theme: 'dark',
-				transition: Bounce,
-			});
-			// console.log({deleteRes});
+			toast.success('Deleted!');
 		} catch (error) {
-			toast.error('Failed to Delete!', {
-				position: 'top-center',
-				autoClose: 5000,
-				closeOnClick: true,
-				draggable: true,
-				theme: 'dark',
-				transition: Bounce,
-			});
+			toast.error('Failed to Delete!');
 			setData(tempData);
 			console.error({error});
 		} finally {
@@ -73,7 +57,12 @@ const MainWrapper = () => {
 					'Content-Type': 'application/json',
 				},
 			});
+			if (!addEmpResp?.ok) {
+				throw new Error('Failed to add data');
+			}
 		} catch (error) {
+			setData(tempData);
+			toast.error('Failed to Add!');
 			console.error({error});
 		}
 	};
@@ -108,9 +97,9 @@ const MainWrapper = () => {
 				</div>
 				{!!data?.length ? (
 					<div className="w-full h-full flex justify-center flex-wrap gap-4 overflow-auto pt-2">
-						{data?.map(cardData => (
+						{data?.map((cardData, index) => (
 							<Card
-								key={data?.id}
+								key={`${data?.id}-${index}`}
 								data={cardData}
 								handleDelete={handleDelete}
 								deleteId={deleteId}

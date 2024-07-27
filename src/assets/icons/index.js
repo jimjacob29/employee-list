@@ -47,10 +47,10 @@ export const EmailIcon = props => (
 			y1="458"
 			y2="458"
 			gradientUnits="userSpaceOnUse">
-			<stop offset="0" stop-color="#FF884B"></stop>
-			<stop offset=".35" stop-color="#FF634C"></stop>
-			<stop offset=".655" stop-color="#FE4A4F"></stop>
-			<stop offset="1" stop-color="#FE4840"></stop>
+			<stop offset="0" stopColor="#FF884B"></stop>
+			<stop offset=".35" stopColor="#FF634C"></stop>
+			<stop offset=".655" stopColor="#FE4A4F"></stop>
+			<stop offset="1" stopColor="#FE4840"></stop>
 		</linearGradient>
 		<path
 			fill="url(#a)"
