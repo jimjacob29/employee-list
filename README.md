@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Employee List Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This README.md provides instructions for setting up and running the employee-list application, a React app that displays employee data in cards.
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+* Node.js and npm (or yarn) installed on your system. You can download them from [https://nodejs.org/](https://nodejs.org/).
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Clone the repository:** 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Navigate to the project directory:
 
-### `npm test`
+Bash
+cd employee-list
+Use code with caution.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Switch to the main branch (optional, if applicable):
 
-### `npm run build`
+Bash
+git checkout main
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Install dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Bash
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Run the application:
 
-### `npm run eject`
+Bash
+npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+You can then access the application in your browser at http://localhost:3000.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Technologies Used
+Frontend:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+React
+Tailwind CSS
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+Backend (Mock API):
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+https://mockapi.io/ (used for mocking API responses)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contact
+If the mock API is not working as expected, please contact the developer at jimjacob29@gmail.com.
 
-### Code Splitting
+Description
+This project is a simple React application that displays employee data in cards. Each card shows the employee's name, profile picture, links to their email and phone number, and a delete button. The application also includes a functionality to add new employees.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Components
+The application utilizes several React components:
 
-### Analyzing the Bundle Size
+Main Wrapper Component: This component serves as the central hub for managing employee data, including fetching, deleting, and adding new entries.
+Card Component: This component renders individual employee details with contact information links and a delete button. It also incorporates hover animations for interactivity.
+Add Employee Component: This component displays a form to capture new employee information and handle form submissions.
+Modal Component: This component manages the appearance and behavior of a modal window, typically used for add functionality and other interactions.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## Interactions
+# Cards
+Hover Interaction: Cards respond with visual changes when hovered over.
+Click Interaction: Clicking on email or phone number links opens those applications (may require configuration).
+Delete Interaction: Clicking the delete button removes the corresponding employee from the list.
+Contact Icon Animations: Contact icons display subtle animations on hover.
+# Modal
+Click Outside to Close: Clicking outside the modal area closes it.
+# Add Form
+Input Validation: All fields are mandatory, ensuring complete employee data capture.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
